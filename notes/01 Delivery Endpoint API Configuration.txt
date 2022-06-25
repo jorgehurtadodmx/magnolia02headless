@@ -1,0 +1,84 @@
+01
+delivery API
+Delivery Endpoint API Configuration
+
+https://docs.magnolia-cms.com/product-docs/6.2/Developing/API/Delivery-API.html
+enpoints of light module
+
+
+02
+Exercise: Create Delivery Endpoint for Pages
+
+1. Create endpoint definition to allow the following request: http://localhost:8080/magnoliaAuthor/.rest/delivery/pages
+
+
+In the browser first, login as a superuser then open the endpoint URL in the same tab. We have not configured security settings yet so we need to be authenticated to see everything correctly.
+
+
+
+PUT THE FOLLOWING IN THE FOLLOWIGN ROUTE
+magnolia02realheadless\light-modules\module01\restEndpoints\delivery
+
+in this local path we will have a json with all the info requested
+http://localhost:8080/magnoliaAuthor/.rest/delivery/pages
+which is pretty cool
+
+
+workspace: website
+limit: 100
+depth: 10
+nodeTypes:
+  - mgnl:page
+  - mgnl:area
+childNodeTypes:
+  - mgnl:area
+  - mgnl:component
+systemProperties:
+  - mgnl:createdBy
+
+
+2. Modify the initial YAML definition to add:
+
+Limit number of results to 2
+Add information about who created the page: mgnl:createdBy
+
+https://git.magnolia-cms.com/projects/TRAINING/repos/training-headless/browse
+
+
+03
+Delivery Endpoint API Methods
+
+https://docs.magnolia-cms.com/product-docs/6.2/Developing/API/Delivery-API.html
+
+Read note method
+
+
+04
+Exercise: Extend Pages Endpoint Definition and Practice Using Methods
+
+1. Extend pages endpoint definition with:
+
+Depth level of 10
+Return node types to be: mgnl:page and mgnl:area
+Returned child node types to be: mgnl:area and mgnl:component
+Change limit property to 100
+Check the documentation page to find the correct properties to add to the configuration.
+https://docs.magnolia-cms.com/product-docs/6.2/Developing/API/Delivery-API.html#_configuration
+
+2. Practice fetching content with pages endpoint. Fetch:
+
+The only main area from the /travel/members page
+Just the pages that have Tour in the title and sorted by title in the descending order
+
+
+http://localhost:8080/magnoliaAuthor/.rest/delivery/pages
+localhost:8080/magnoliaAuthor/.rest/delivery/pages/travel/members
+http://localhost:8080/magnoliaAuthor/.rest/delivery/pages?title[like]=%25Tour%25&orderBy=title%20desc
+
+
+
+-----------------------
+
+http://localhost:8080/magnoliaAuthor/.rest/delivery/pages/travel?lang=de
+
+VER EJERCICIO PARA MAS

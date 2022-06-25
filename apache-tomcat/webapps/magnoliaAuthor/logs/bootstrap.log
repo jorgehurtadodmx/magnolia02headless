@@ -1,0 +1,23 @@
+INFO  24.06.2022 11:23:17  Trying to initialize repositories from: 
+    C:\Users\j.hurtado.de.moxo\magnolia02realheadless\apache-tomcat\webapps\magnoliaAuthor\WEB-INF\bootstrap\author
+    C:\Users\j.hurtado.de.moxo\magnolia02realheadless\apache-tomcat\webapps\magnoliaAuthor\WEB-INF\bootstrap\common
+INFO  24.06.2022 11:23:17  Repository [dam] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [keystore] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [contacts] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [usergroups] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [magnolia-mgnlSystem] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [scripts] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [tours] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [website] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [magnolia-mgnlVersion] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [userroles] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [profiles] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [users] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [tasks] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [imaging] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [category] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [rss] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [default] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [resources] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [messages] has been initialized.
+INFO  24.06.2022 11:23:17  Repository [config] has been initialized.

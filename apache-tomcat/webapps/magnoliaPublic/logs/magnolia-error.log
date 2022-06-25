@@ -1,0 +1,154 @@
+ERROR info.magnolia.rest.registry.EndpointDefinitionRegistry 24.06.2022 12:34:46 -- Error happens when checking endpoint duplications.
+info.magnolia.config.registry.Registry$InvalidDefinitionException: delivery/pages
+	at info.magnolia.config.registry.DefinitionProviderBuilder$DefinitionProviderImpl.get(DefinitionProviderBuilder.java:234) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.registry.AbstractDefinitionProviderWrapper.get(AbstractDefinitionProviderWrapper.java:61) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.rest.registry.EndpointDefinitionRegistry.onRegister(EndpointDefinitionRegistry.java:126) ~[magnolia-rest-integration-2.2.14.jar:?]
+	at info.magnolia.rest.registry.EndpointDefinitionRegistry.register(EndpointDefinitionRegistry.java:113) ~[magnolia-rest-integration-2.2.14.jar:?]
+	at info.magnolia.config.source.yaml.YamlConfigurationSource.loadAndRegister(YamlConfigurationSource.java:143) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.source.yaml.AbstractFileResourceConfigurationSource.lambda$start$2(AbstractFileResourceConfigurationSource.java:162) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.resourceloader.layered.LayeredResourceOrigin$RelayingChangeHandler.onResourceChanged(LayeredResourceOrigin.java:284) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.resourceloader.AbstractResourceOrigin.dispatchResourceChange(AbstractResourceOrigin.java:132) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.resourceloader.file.FileWatcherCallback.dispatchResourceChange(FileWatcherCallback.java:118) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.resourceloader.file.FileWatcherCallback.modified(FileWatcherCallback.java:89) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.dirwatch.DirectoryWatcher.processEvent(DirectoryWatcher.java:303) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.dirwatch.DirectoryWatcher.run(DirectoryWatcher.java:247) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+ERROR info.magnolia.config.source.yaml.YamlConfigurationSource 24.06.2022 12:34:46 -- 1 severe problems have been encountered:
+ERROR info.magnolia.config.source.yaml.YamlConfigurationSource 24.06.2022 12:34:46 -- 
+Severity type:   SEVERE 
+Title:           /: [Definition resolution] - Parsing configuration data from [/module01/restEndpoints/delivery/pages.yaml] failed 
+Problem details: Failed to parse YAML file:
+Scanner: mapping values are not allowed here
+ in 'reader', line 7, column 19:
+        childNodeTypes:
+                      ^
+
+info.magnolia.config.source.yaml.YamlReaderException: YAML parsing error in LayeredResource{path='/module01/restEndpoints/delivery/pages.yaml', layeredResources=[FileSystemResource{origin=filesystem,path=/module01/restEndpoints/delivery/pages.yaml,file}]} at line 6, column 18:
+        childNodeTypes:
+                      ^: mapping values are not allowed here
+	at info.magnolia.config.source.yaml.YamlReader.doReadWithDependencies(YamlReader.java:110) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.source.yaml.YamlReader.readWithDependencies(YamlReader.java:100) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.source.yaml.YamlReader.readWithDependencies(YamlReader.java:96) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.source.yaml.YamlDefinitionProvider.resolve(YamlDefinitionProvider.java:194) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.source.yaml.YamlDefinitionProvider.getDelegate(YamlDefinitionProvider.java:155) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.registry.AbstractDefinitionProviderWrapper.get(AbstractDefinitionProviderWrapper.java:61) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.rest.registry.EndpointDefinitionRegistry.onRegister(EndpointDefinitionRegistry.java:126) ~[magnolia-rest-integration-2.2.14.jar:?]
+	at info.magnolia.rest.registry.EndpointDefinitionRegistry.register(EndpointDefinitionRegistry.java:113) ~[magnolia-rest-integration-2.2.14.jar:?]
+	at info.magnolia.config.source.yaml.YamlConfigurationSource.loadAndRegister(YamlConfigurationSource.java:143) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.source.yaml.AbstractFileResourceConfigurationSource.lambda$start$2(AbstractFileResourceConfigurationSource.java:162) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.resourceloader.layered.LayeredResourceOrigin$RelayingChangeHandler.onResourceChanged(LayeredResourceOrigin.java:284) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.resourceloader.AbstractResourceOrigin.dispatchResourceChange(AbstractResourceOrigin.java:132) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.resourceloader.file.FileWatcherCallback.dispatchResourceChange(FileWatcherCallback.java:118) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.resourceloader.file.FileWatcherCallback.modified(FileWatcherCallback.java:89) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.dirwatch.DirectoryWatcher.processEvent(DirectoryWatcher.java:303) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.dirwatch.DirectoryWatcher.run(DirectoryWatcher.java:247) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+Caused by: org.yaml.snakeyaml.scanner.ScannerException: mapping values are not allowed here
+ in 'reader', line 7, column 19:
+        childNodeTypes:
+                      ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchValue(ScannerImpl.java:870) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:358) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:227) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceEntry.produce(ParserImpl.java:502) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:158) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:148) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeSequenceNode(Composer.java:208) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:160) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:257) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:248) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:236) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:162) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:95) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.getSingleNode(Composer.java:119) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:150) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.Yaml.loadFromReader(Yaml.java:472) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:424) ~[snakeyaml-1.26.jar:?]
+	at info.magnolia.config.source.yaml.YamlReader.doReadWithDependencies(YamlReader.java:108) ~[magnolia-configuration-6.2.20.jar:?]
+	... 20 more
+ERROR info.magnolia.rest.registry.EndpointDefinitionRegistry 24.06.2022 12:34:47 -- Error happens when checking endpoint duplications.
+info.magnolia.config.registry.Registry$InvalidDefinitionException: delivery/pages
+	at info.magnolia.config.registry.DefinitionProviderBuilder$DefinitionProviderImpl.get(DefinitionProviderBuilder.java:234) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.registry.AbstractDefinitionProviderWrapper.get(AbstractDefinitionProviderWrapper.java:61) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.rest.registry.EndpointDefinitionRegistry.onRegister(EndpointDefinitionRegistry.java:126) ~[magnolia-rest-integration-2.2.14.jar:?]
+	at info.magnolia.rest.registry.EndpointDefinitionRegistry.register(EndpointDefinitionRegistry.java:113) ~[magnolia-rest-integration-2.2.14.jar:?]
+	at info.magnolia.config.source.yaml.YamlConfigurationSource.loadAndRegister(YamlConfigurationSource.java:143) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.source.yaml.AbstractFileResourceConfigurationSource.lambda$start$2(AbstractFileResourceConfigurationSource.java:162) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.resourceloader.layered.LayeredResourceOrigin$RelayingChangeHandler.onResourceChanged(LayeredResourceOrigin.java:284) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.resourceloader.AbstractResourceOrigin.dispatchResourceChange(AbstractResourceOrigin.java:132) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.resourceloader.file.FileWatcherCallback.dispatchResourceChange(FileWatcherCallback.java:118) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.resourceloader.file.FileWatcherCallback.modified(FileWatcherCallback.java:89) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.dirwatch.DirectoryWatcher.processEvent(DirectoryWatcher.java:303) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.dirwatch.DirectoryWatcher.run(DirectoryWatcher.java:247) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+ERROR info.magnolia.config.source.yaml.YamlConfigurationSource 24.06.2022 12:34:47 -- 1 severe problems have been encountered:
+ERROR info.magnolia.config.source.yaml.YamlConfigurationSource 24.06.2022 12:34:47 -- 
+Severity type:   SEVERE 
+Title:           /: [Definition resolution] - Parsing configuration data from [/module01/restEndpoints/delivery/pages.yaml] failed 
+Problem details: Failed to parse YAML file:
+Scanner: mapping values are not allowed here
+ in 'reader', line 7, column 19:
+        childNodeTypes:
+                      ^
+
+info.magnolia.config.source.yaml.YamlReaderException: YAML parsing error in LayeredResource{path='/module01/restEndpoints/delivery/pages.yaml', layeredResources=[FileSystemResource{origin=filesystem,path=/module01/restEndpoints/delivery/pages.yaml,file}]} at line 6, column 18:
+        childNodeTypes:
+                      ^: mapping values are not allowed here
+	at info.magnolia.config.source.yaml.YamlReader.doReadWithDependencies(YamlReader.java:110) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.source.yaml.YamlReader.readWithDependencies(YamlReader.java:100) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.source.yaml.YamlReader.readWithDependencies(YamlReader.java:96) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.source.yaml.YamlDefinitionProvider.resolve(YamlDefinitionProvider.java:194) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.source.yaml.YamlDefinitionProvider.getDelegate(YamlDefinitionProvider.java:155) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.registry.AbstractDefinitionProviderWrapper.get(AbstractDefinitionProviderWrapper.java:61) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.rest.registry.EndpointDefinitionRegistry.onRegister(EndpointDefinitionRegistry.java:126) ~[magnolia-rest-integration-2.2.14.jar:?]
+	at info.magnolia.rest.registry.EndpointDefinitionRegistry.register(EndpointDefinitionRegistry.java:113) ~[magnolia-rest-integration-2.2.14.jar:?]
+	at info.magnolia.config.source.yaml.YamlConfigurationSource.loadAndRegister(YamlConfigurationSource.java:143) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.config.source.yaml.AbstractFileResourceConfigurationSource.lambda$start$2(AbstractFileResourceConfigurationSource.java:162) ~[magnolia-configuration-6.2.20.jar:?]
+	at info.magnolia.resourceloader.layered.LayeredResourceOrigin$RelayingChangeHandler.onResourceChanged(LayeredResourceOrigin.java:284) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.resourceloader.AbstractResourceOrigin.dispatchResourceChange(AbstractResourceOrigin.java:132) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.resourceloader.file.FileWatcherCallback.dispatchResourceChange(FileWatcherCallback.java:118) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.resourceloader.file.FileWatcherCallback.modified(FileWatcherCallback.java:89) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.dirwatch.DirectoryWatcher.processEvent(DirectoryWatcher.java:303) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at info.magnolia.dirwatch.DirectoryWatcher.run(DirectoryWatcher.java:247) ~[magnolia-resource-loader-6.2.20.jar:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+Caused by: org.yaml.snakeyaml.scanner.ScannerException: mapping values are not allowed here
+ in 'reader', line 7, column 19:
+        childNodeTypes:
+                      ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchValue(ScannerImpl.java:870) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:358) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:227) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceEntry.produce(ParserImpl.java:502) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:158) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:148) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeSequenceNode(Composer.java:208) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:160) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:257) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:248) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:236) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:162) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:95) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.getSingleNode(Composer.java:119) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:150) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.Yaml.loadFromReader(Yaml.java:472) ~[snakeyaml-1.26.jar:?]
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:424) ~[snakeyaml-1.26.jar:?]
+	at info.magnolia.config.source.yaml.YamlReader.doReadWithDependencies(YamlReader.java:108) ~[magnolia-configuration-6.2.20.jar:?]
+	... 20 more

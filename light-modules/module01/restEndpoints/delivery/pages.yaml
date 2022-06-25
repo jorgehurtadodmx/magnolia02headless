@@ -1,0 +1,11 @@
+workspace: website
+limit: 100
+systemProperties:
+  - mgnl:createdBy
+depth: 10
+nodeTypes:
+  - mgnl:page
+  - mgnl:area
+childNodeTypes:
+  - mgnl:area
+  - mgnl:component
