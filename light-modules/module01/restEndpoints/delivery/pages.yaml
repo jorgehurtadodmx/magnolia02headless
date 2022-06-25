@@ -9,3 +9,15 @@ nodeTypes:
 childNodeTypes:
   - mgnl:area
   - mgnl:component
+references:
+  - name: imageReference
+    propertyName: image
+    referenceResolver:
+      $type: assetReferenceResolver
+      assetRenditions:
+        - 320x240
+  - name: tourTypeReference
+    propertyName: tourTypes
+    referenceResolver:
+      $type: jcrReferenceResolver
+      targetWorkspace: category
