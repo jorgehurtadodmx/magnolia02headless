@@ -1,0 +1,48 @@
+05
+delivery endpoitn api localized content, simplemente mas parametros
+
+https://urlisolation.com/browser?url=https%3A%2F%2Fdocs.magnolia-cms.com%2Fproduct-docs%2F6.2%2FDeveloping%2FAPI%2FDelivery-API%2FRequesting-localized-content-with-the-delivery-endpoint.html&traceToken=1656152183;accentureinc_hosted;https:/magnoliacademy.talentlms.&clickId=CABFBB05-C430-4DCC-AEC0-715B33A944FC
+
+
+06
+
+Tasks and procedure
+
+
+
+1. Fetch /travel page in German language with help of lang query parameter.
+http://localhost:8080/magnoliaAuthor/.rest/delivery/pages/travel?lang=de
+2. Fetch /travel page in German language with help of Accept-Language header.
+
+
+
+To set Accept-Language header you will have to use third-party software like Postman or set the header in JavaScript fetch method.
+
+STILL TODO
+
+07 SOLUTION
+
+08 Delivery Endpoint API Resolving References
+
+Exercise: Extend Pages Endpoint With Images and Tour Types Resolver
+https://docs.magnolia-cms.com/product-docs/6.2/Developing/API/Delivery-API/Resolving-references-with-the-delivery-endpoint.html
+
+
+09
+Exercise: Extend Pages Endpoint With Images and Tour Types Resolver
+1. Check the property names that your endpoint returns for images and tour types.
+
+You can use the following endpoint: 
+
+http://localhost:8080/magnoliaAuthor/.rest/delivery/pages/travel
+
+Extend your delivery endpoint to resolve images and tour types. Tour types target workspace is: category.
+
+
+
+2. Add 320x240 rendition to image resolver.
+https://docs.magnolia-cms.com/product-docs/6.2/Developing/API/Delivery-API/Resolving-references-with-the-delivery-endpoint.html#_properties_3
+
+
+10
+SOLUTION
